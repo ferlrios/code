@@ -8,7 +8,6 @@ let cities = [
   "Medellin",
   "Toronto",
 ];
-const infoCities = [];
 
 /* Consulto los datos de las ciudades en la API y con un append los añado a la tabla*/
 for (let x = 0; x < cities.length; x++) {
