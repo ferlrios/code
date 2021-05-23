@@ -1,0 +1,39 @@
+table,
+th,
+td {
+  border: 1px solid #a3a3a388;
+  border-collapse: collapse;
+  padding: 0.4em;
+  font-weight: 200;
+}
+
+table {
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  border: 1px solid;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(253, 253, 253);
+}
+
+thead {
+  background-color: rgb(253, 253, 253);
+  text-align: left;
+}
+
+/* Medida del contenedor de la tabla para celulares grandes landscape y tablets */
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* Navegación lateral para visualizar la tabla desde celulares */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+    display: block;
+    overflow-x: scroll;
+  }
+}
