@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="R3/img/palmera.png" />
-    <!-- Enlace a FontAwesome, donde sacamos el icono utilizado en la tabla -->
+    <!-- Enlace a FontAwesome, donde sacamos el icono de play -->
     <script
       src="https://kit.fontawesome.com/28bf7ed918.js"
       crossorigin="anonymous"
@@ -25,6 +26,7 @@
   <body>
     <div class="container mt-5 mx-auto">
       <div class="row">
+        <!-- Imagen y botón de play que abren el video en un modal -->
         <div id="img-container" class="col-lg-6 col-12">
           <img
             class="img-fluid"
@@ -55,6 +57,7 @@
       </div>
     </div>
 
+    <!-- Modal con video y botón de cerrar -->
     <div id="modal-video" class="modal" tabindex="-1">
       <div class="modal-dialog modal-xl">
         <div class="modal-content transparent">
@@ -69,18 +72,16 @@
             controls
             class="mt-4"
           >
+            <!-- Mensaje alternativo en caso de fallar el video -->
             <span>No se encontró el video</span>
           </video>
         </div>
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Link a Jquery -->
     <script src="R3/jquery.js"></script>
+    <!-- Link a mi aplicación javascript -->
     <script src="R3/application.js"></script>
   </body>
 </html>

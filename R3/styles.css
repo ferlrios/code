@@ -43,6 +43,7 @@ h1 {
   height: 100%;
 }
 
+/* Le damos posición relativa al container de la imagen y absoluta al icono de play para posicionarlo por encima en el centro */
 #img-container {
   display: inline-block;
   position: relative;
@@ -71,6 +72,7 @@ h1 {
   -o-border-radius: 1.5em;
 }
 
+/* Le añadimos un efecto al icono de play */
 #img-container i:hover {
   transform: scale(1.2);
   transition: 200ms;
@@ -84,6 +86,7 @@ h1 {
   -o-transform: scale(1.2);
 }
 
+/* Sacamos el margin left que tenía el contenedor de texto para alejarlo de la foto, agregamos margin de eje Y a los textos, pues ahora apareceran por debajo. Además reeubicamos correctamente el icono de play (Cel landscape y tablets) */
 @media screen and (max-width: 990px) {
   .margin-text {
     margin: auto;
@@ -101,6 +104,7 @@ h1 {
   }
 }
 
+/* Ubicamos el icono de play correctamente para celulares pequeños */
 @media screen and (max-width: 365px) {
   #img-container i {
     font-size: 1.5em;
@@ -109,6 +113,7 @@ h1 {
   }
 }
 
+/* Ubicamos el icono de play correctamente para celulares grandes */
 @media screen and (min-width: 365px) and (max-width: 576px) {
   #img-container i {
     font-size: 1.5em;
