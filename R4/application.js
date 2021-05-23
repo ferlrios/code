@@ -1,5 +1,5 @@
 /* Definí un array con ciudades a consultar a la API */
-let city = [
+let cities = [
   "New_York",
   "Buenos _Aires",
   "London",
@@ -8,19 +8,23 @@ let city = [
   "Medellin",
   "Toronto",
 ];
+const infoCities = [];
 
-/* Con un for recorremos el array pegandole a la API y trayendo a nuestra tabla (a través de la id de los <tr>) los datos. */
-for (let x = 0; x <= 6; x++) {
+/* Consulto los datos de las ciudades en la API y con un append los añado a la tabla*/
+for (let x = 0; x < cities.length; x++) {
   let config = {
     type: "get",
-    url: `http://api.weatherstack.com/current?access_key=64fd70580336a2dab8c706b0ffefdb22&query=${city[x]}`,
+    url: `http://api.weatherstack.com/current?access_key=5f572663dd5ecf9a1d27de7ec32010a6&query=${cities[x]}`,
     dataType: "json",
     success: (response) => {
-      $(`#row${x}>td:nth-child(1)`).html(`${response.location.name}`);
-      $(`#row${x}>td:nth-child(2)`).html(`${response.location.country}`);
-      $(`#row${x}>td:nth-child(3)`).html(`${response.location.region}`);
-      $(`#row${x}>td:nth-child(4)`).html(`${response.current.temperature}°`);
-      $(`#row${x}>td:nth-child(5)`).html(`${response.location.localtime}`);
+      $("#table").append(`
+      <tr>
+      <td>${response.location.name}</td>
+      <td>${response.location.country}</td>
+      <td>${response.location.region}</td>
+      <td>${response.current.temperature}</td>
+      <td>${response.location.localtime}</td>
+      `);
     },
     error: function () {
       alert("Fallo en el servidor, intentelo de nuevo más tarde.");
